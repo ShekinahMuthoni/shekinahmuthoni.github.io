@@ -469,8 +469,60 @@
     .nav-links { display: none; }
   }
   @media (max-width: 600px) {
+    section { padding: 3rem 1rem; }
+    nav { padding: 0 1rem; }
+    #tools { padding: 2rem 1rem; }
+
+    /* HERO MOBILE */
+    .hero { padding: 0; min-height: unset; }
+    .hero-inner { grid-template-columns: 1fr; gap: 0; }
+    .hero-right { order: -1; }
+    .hero-photo-wrap {
+      max-width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+    .hero-photo-wrap::before { display: none; }
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4/4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 0;
+    }
+    .hero-stats { display: none; }
+    .hero-left {
+      background: var(--cream);
+      padding: 2rem 1.25rem 2.5rem;
+      text-align: center;
+    }
+    .hero-tag { display: inline-block; margin-bottom: 1rem; }
+    .hero h1 { font-size: 2.4rem; margin-bottom: 1rem; }
+    .hero-desc { font-size: 0.92rem; margin: 0 auto 1.5rem; }
+    .hero-cta { justify-content: center; }
+
+    /* TOOLS MOBILE - 3 per row, wrap naturally */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .tool-pill {
+      padding: 0.5rem 0.6rem;
+      font-size: 0.72rem;
+      border-radius: 0.75rem;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .tool-logo { width: 20px; height: 20px; }
+
+    /* OTHER */
     .services-grid { grid-template-columns: 1fr; }
     .edu-card { grid-template-columns: 1fr; gap: 0.5rem; }
+    .projects-grid { gap: 1rem; }
+    .contact-links { flex-direction: column; }
   }
 </style>
 </head>
