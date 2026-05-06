@@ -562,6 +562,17 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+</ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#tools" onclick="toggleMenu()">Tools</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#education" onclick="toggleMenu()">Education</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -879,6 +890,12 @@
 <footer>
   <p>© 2026 Shekinah Muthoni · Nairobi, Kenya · Built with HTML & CSS</p>
 </footer>
-
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+</script>
+ 
 </body>
 </html>
