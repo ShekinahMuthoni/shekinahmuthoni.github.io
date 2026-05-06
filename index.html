@@ -471,48 +471,6 @@
  @media (max-width: 600px) {
     section { padding: 3rem 1rem; }
     #tools { padding: 2rem 1rem; }
-.hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem;
-    }
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--dark);
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 52px; left: 0; right: 0;
-      background: var(--white);
-      z-index: 999;
-      flex-direction: column;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      border-bottom: 2px solid var(--accent);
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      padding: 1rem 1.5rem;
-      font-size: 0.95rem;
-      color: var(--dark);
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid var(--border);
-      letter-spacing: 0.03em;
-      transition: background 0.2s, color 0.2s;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { background: var(--accent-light); color: var(--accent); }
-  
    /* NAV MOBILE */
     nav {
       padding: 0 1rem;
@@ -522,9 +480,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
     .nav-logo { font-size: 1rem; }
-
-  .hamburger { display: none; }
-  .mobile-menu { display: none; }
 
     /* HERO MOBILE */
     .hero { padding: 4.5rem 0.5rem 2rem; min-height: unset; }
@@ -607,18 +562,7 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-</ul>
-  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#tools" onclick="toggleMenu()">Tools</a>
-  <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#projects" onclick="toggleMenu()">Projects</a>
-  <a href="#education" onclick="toggleMenu()">Education</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
 
 <!-- HERO -->
 <section style="padding-top: 0;">
@@ -935,12 +879,6 @@
 <footer>
   <p>© 2026 Shekinah Muthoni · Nairobi, Kenya · Built with HTML & CSS</p>
 </footer>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('open');
-  }
-</script>
- 
+
 </body>
 </html>
